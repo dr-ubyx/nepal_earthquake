@@ -1,9 +1,8 @@
-class CreateVictimSites < ActiveRecord::Migration
+class CreateRequests < ActiveRecord::Migration
   def change
-    create_table :victim_sites do |t|
+    create_table :requests do |t|
       t.string :name
       t.integer :people
-
       t.timestamps
     end
   end

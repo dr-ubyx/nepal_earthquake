@@ -1,0 +1,22 @@
+<h1>List of Donations</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+
+  <% @donations.each do |donation| %>
+    <tr>
+      <td><%= link_to donation.title, donation %></td>
+      <td>
+        <%= link_to 'Edit', edit_donation_path(donation.id) %>
+        <%= link_to 'Delete', donation, :method => 'delete' %>
+      </td>
+    </tr>
+  <% end -%>
+</table>
+
+<p><%= link_to 'New donation', new_donation_path %></p>
